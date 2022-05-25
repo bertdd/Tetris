@@ -59,18 +59,5 @@ class Board
             $this->cells[$last][$column] = true;
         }
     }
-
-    private function Move(int $x) : void
-    {
-        $y = count($this->cells) - 1;
-        while ($y > 0 && $this->cells[$y][$x])
-        {
-            $y--;
-        }
-        if ($y >= 0)
-        {
-            $this->cells[$y][$x] = true;
-        }
-    }
 }
 ?>
