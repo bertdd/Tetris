@@ -1,0 +1,22 @@
+﻿body {
+}
+
+table
+{
+  border: solid red;
+}
+
+td {
+  height: 20px;
+  width: 40px;
+}
+
+.full
+{
+  background: green;
+}
+
+.empty
+{
+  background: lightgray;
+}
