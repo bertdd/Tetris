@@ -6,7 +6,7 @@ class Board
 
     private int $height;
 
-    private $cells;
+    private array $cells;
 
     public function __construct(int $width, int $height)
     {
