@@ -38,7 +38,14 @@ class Board
             for ($x = 0; $x < $this->width; $x++)
             {
                 $css = $this->cells[$y][$x] ? 'full' : 'empty';
-                echo "<td class='$css'>&nbsp;</td>";
+                if ($y > 0)
+                {
+                    echo "<td class='$css'>&nbsp;</td>";
+                }
+                else
+                {
+                    echo "<td class='$css' align='center'><a href='index.php?col=$x'>&nbsp;$x&nbsp;</a></td>";
+                }
             }
             echo '</tr>';
         }
