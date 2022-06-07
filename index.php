@@ -6,8 +6,11 @@
     <h1>PHPetris</h1>
     <?php
     require 'Board.class.php';
+    require 'Tetris.class.php';
 
     session_start();
+    $tetris = new Tetris();
+
     $board = isset($_SESSION["board"]) ?  $_SESSION["board"] : new Board(10, 20);
     $_SESSION["board"] = $board;
 
@@ -22,6 +25,8 @@
     }
 
     $board->DrawGrid();
+
+    $tetris->DrawBlocks();
     ?>
 </body>
 </html>
