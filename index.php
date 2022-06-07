@@ -17,6 +17,7 @@
         if ($col >= 0 && $col <= 9)
         {
             $board->Throw($col);
+            $board->CheckBottomRow();
         }
     }
 

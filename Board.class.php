@@ -15,17 +15,22 @@ class Board
         $this->initialize();
     }
 
+    private function NewRow() : array
+    {
+        $row = [];
+        for ($x = 0; $x < $this->width; $x++)
+        {
+            $row[] = false;
+        }
+        return $row;
+    }
+
     private function initialize() : void
     {
         $this->cells = [];
         for ($y = 0; $y < $this->height; $y++)
         {
-            $row = [];
-            for ($x = 0; $x < $this->width; $x++)
-            {
-                $row[] = false;
-            }
-            $this->cells[] = $row;
+            $this->cells[] = $this->NewRow();
         }
     }
 
@@ -65,6 +70,40 @@ class Board
         {
             $this->cells[$last][$column] = true;
         }
+    }
+
+    public function CheckBottomRow() : void
+    {
+        if ($this->BottomRowFull())
+        {
+            $this->ClearLastRow();
+        }
+    }
+
+    private function ClearLastRow() : void
+    {
+        $lastRow = $this->height - 1;
+        for ($y = $lastRow; $y > 0; $y--)
+        {
+            $this->cells[$y] = $this->cells[$y - 1];
+        }
+
+        $this->cells[0] = $this->NewRow();
+    }
+
+    private function BottomRowFull() : bool
+    {
+        $lastRow = $this->height - 1;
+        $full = true;
+        for ($x = 0; $x < $this->width; $x++)
+        {
+            if ($this->cells[$lastRow][$x] == false)
+            {
+                $full = false;
+                break;
+            }
+        }
+        return $full;
     }
 }
 ?>
