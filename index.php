@@ -24,9 +24,17 @@
         }
     }
 
+    print "<table class='main'>";
+    print '<tr>';
+    print '<td>';
     $board->DrawGrid();
+    print '</td>';
 
+    print "<td style='width: 200px'>";
     $tetris->DrawBlocks();
+    print '</td>';
+    print '</tr>';
+    print '</table>';
     ?>
 </body>
 </html>

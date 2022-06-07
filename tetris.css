@@ -1,14 +1,20 @@
 ﻿body {
 }
 
-table
-{
+table {
   border: solid red;
+  border-collapse: collapse;
 }
 
 td {
   height: 20px;
-  width: 40px;
+  width: 20px;
+  border: 0;
+}
+
+.main
+{
+  border: 0;
 }
 
 .full
@@ -21,7 +27,29 @@ td {
   background: whitesmoke;
 }
 
-.shape 
-{
-  border: solid blue;
+.shape {
+  border-collapse: collapse;
+  border: none;
 }
+
+.sample
+{
+  padding: 7px;
+}
+
+.shapeFull {
+  padding: 0;
+  border: none;
+  background: lightblue;
+  height: 20px;
+  width: 20px;
+}
+
+.shapeEmpty {
+  padding: 0;
+  border: none;
+  height: 20px;
+  width: 20px;
+}
+
+

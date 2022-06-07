@@ -14,9 +14,9 @@ abstract class Shape
             print "<tr>";
             foreach ($row as $col)
             {
-                print "<td>";
-                print $col ? "X" : "&nbsp;";
-                print "</td>";
+                $css = $col ? "shapeFull" : "shapeEmpty";
+                $color = $col ? "style='background: $this->Color;'" : "";
+                print "<td class='$css' $color>&nbsp;</td>";
             }
             print "</tr>";
         }
