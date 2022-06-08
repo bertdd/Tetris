@@ -16,11 +16,18 @@
 
     if (count($_GET) > 0)
     {
-        $col = intval($_GET["col"]);
-        if ($col >= 0 && $col <= 9)
+        if (isset($_GET["col"]))
         {
-            $board->Throw($col);
-            $board->CheckBottomRow();
+            $col = intval($_GET["col"]);
+            if ($col >= 0 && $col <= 9)
+            {
+                $board->Throw($col);
+                $board->CheckBottomRow();
+            }
+        }
+        if (isset($_GET["color"]))
+        {
+            print $_GET["color"];
         }
     }
 

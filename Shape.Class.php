@@ -12,11 +12,12 @@ abstract class Shape
         foreach ($this->Blocks as $row)
         {
             print "<tr>";
-            foreach ($row as $col)
+            foreach ($row as $column)
             {
-                $css = $col ? "shapeFull" : "shapeEmpty";
-                $color = $col ? "style='background: $this->Color;'" : "";
-                print "<td class='$css' $color>&nbsp;</td>";
+                $css = $column ? "shapeFull" : "shapeEmpty";
+                $color = $column ? "style='background: $this->Color;'" : "";
+                $link = $column ? "<a href='index.php?color=$this->Color'>&nbsp;</a>" : "&nbsp;";
+                print "<td class='$css' $color>$link</td>";
             }
             print "</tr>";
         }

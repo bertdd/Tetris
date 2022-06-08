@@ -6,7 +6,7 @@ class El extends Shape
 {
     public function __construct()
     {
-        $this->Color = "LightBlue";
+        $this->Color = "DarkBlue";
 
         $this->Blocks = [];
 

@@ -45,6 +45,11 @@ td {
   width: 20px;
 }
 
+.shapeFull a 
+{
+   text-decoration:none;
+}
+
 .shapeEmpty {
   padding: 0;
   border: none;
