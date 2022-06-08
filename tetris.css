@@ -43,6 +43,7 @@ td {
   background: lightblue;
   height: 20px;
   width: 20px;
+  border-radius: 100%;
 }
 
 .shapeFull a 
