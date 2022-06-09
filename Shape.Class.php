@@ -6,6 +6,20 @@ abstract class Shape
 
     public array $Blocks;
 
+    public function Rotate()
+    {
+        $result = [];
+
+        for ($y = 0; $y < count($this->Blocks); $y++)
+        {
+            for ($x = 0; $x < count($this->Blocks[$y]); $x++)
+            {
+                $result[$x][$y] = $this->Blocks[$y][$x];              
+            }
+        }
+        $this->Blocks = $result;
+    }
+
     public function Draw() : void
     {
         print "<table class='shape'>";

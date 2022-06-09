@@ -8,18 +8,10 @@ class El extends Shape
     {
         $this->Color = "DarkBlue";
 
-        $this->Blocks = [];
+        $this->Blocks = [
+                          [true,  true,  true],
+                          [false, false, true]
+                        ];
 
-        $row = [];
-        $row[0] = true;
-        $row[1] = true;
-        $row[2] = true;
-        $this->Blocks [] = $row;
-
-        $row = [];
-        $row[0] = false;
-        $row[1] = false;
-        $row[2] = true;
-        $this->Blocks [] = $row;
     }
 }

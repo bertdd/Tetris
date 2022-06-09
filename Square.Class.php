@@ -8,11 +8,9 @@ class Square extends Shape
     {
         $this->Color = "Yellow";
 
-        $this->Blocks = [];
-        $row = [];
-        $row[0] = true;
-        $row[1] = true;
-        $this->Blocks[0] = $row;
-        $this->Blocks[1] = $row;
+        $this->Blocks = [
+                          [true, true],
+                          [true, true]
+                        ];
     }
 }

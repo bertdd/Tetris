@@ -11,6 +11,7 @@ class Tetris
     public function __construct()
     {
         $this->blocks = [new Long(), new Square(), new Tee(), new Zed(), new El()];
+        $this->blocks[2]->Rotate();
     }
 
     public function DrawBlocks()
